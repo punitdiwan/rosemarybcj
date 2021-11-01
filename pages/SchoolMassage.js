@@ -44,7 +44,7 @@ const SchoolMassage = ({ header_data }) => {
         className="flex flex-col md:flex-row w-full justify-center font-normal leading-7 
 text-base px-10 md:px-16 py-10 text-gray-600 bg-[#cbdcf8]"
       >
-        <div className="w-4/5  justify-center mb-5 flex align-middle md:w-6/12 ">
+        <div className="w-5/5  justify-center mb-5 flex align-middle md:w-6/12 ">
 
           <img className=" h-[150px] md:h-[200px] lg:h-[250px]" src={header_data?.data ? header_data?.data[0]?.logo?.data?.full_url : "https://rosemarydn.com/images/logo.png"}
           //  src="https://rosemarydn.com/images/school.PNG"
@@ -64,21 +64,21 @@ text-base px-10 md:px-16 py-10 text-gray-600 bg-[#cbdcf8]"
         </div>
       </div>
       <div className="flex flex-row justify-center text-center text-black no-underline bg-[#81cef1] ">
-        <div className="m-3 border-white border-solid border-1 md:my-5 md:mx-5 ">  
-        <a className="" href="Contactus">
-          <img
-            className=" h-[100px] "
-            src="https://rosemarydn.com/images/tc.png"
-            alt="slide1"
+        <div className="m-3 border-white border-solid border-1 md:my-7 md:mx-8 px-10" style={{ border: "1px solid white" }}>
+          <a className="" href="Contactus">
+            <img
+              className=" h-[70px] "
+              src="/images/tc.png"
+              alt="slide1"
 
-          />
-        </a>ContactUs
+            />
+          </a>ContactUs
         </div>
-        <div className="m-3 border-white border-solid md:my-5 md:mx-5 border-1">
+        <div className="m-3 border-white border-solid md:my-7 md:mx-8 border-1 px-10 py-1" style={{ border: "1px solid white" }}>
           <a className="" href="Gallery">
             <img
-              className="  h-[100px]  "
-              src="https://rosemarydn.com/images/photo.png"
+              className="h-[70px]"
+              src="/images/photo.png"
               alt="slide1"
             />
 

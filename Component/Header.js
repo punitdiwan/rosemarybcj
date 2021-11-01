@@ -78,7 +78,7 @@ const Header = ({header_data}) => {
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </button>
-                  <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu ">
+                  <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu lg:ml-[45px] ">
                     <li className="border-b border-gray-700 ">
                       <Link href="/AboutUs">
                         <a className="block px-4 py-2 whitespace-no-wrap bg-blue-600 hover:no-underline text-yellow-50 hover:bg-white hover:text-black">
@@ -123,7 +123,7 @@ const Header = ({header_data}) => {
                       <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z" />
                     </svg>
                   </button>
-                  <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu">
+                  <ul className="absolute z-20 hidden pt-0 pb-0 text-gray-700 dropdown-menu lg:ml-[45px]">
                     <li className="border-b border-gray-700 hover:border-b hover:border-black ">
                       <a
                         className="block px-4 py-2 whitespace-no-wrap bg-blue-600 text-yellow-50 hover:no-underline hover:bg-white hover:text-black"

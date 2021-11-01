@@ -6,8 +6,8 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        'Admission': "url('https://rosemarydn.com/images/ad_lower.JPG')",
-      'Facilities': "url('https://rosemarydn.com/images/ray.JPG')",
+        'Admission': "url('/images/ad_lower.jpeg')",
+      'Facilities': "url('/images/ray.JPG')",
                 },
       colors: {
         footers: {

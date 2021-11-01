@@ -5,13 +5,13 @@ import Slider from '../pages/Slider'
 import HomeEvents from '../pages/HomeEvents'
  
 
-export default function Home({ data_header }) { 
+export default function Home({ data_header ,slider_data}) { 
 
   console.log(data_header)
   return (
     <div>
       <Layout header_data={data_header}>
-        <Slider /> 
+        <Slider  slider_data={slider_data}/> 
         
         <SchoolMassage  header_data={data_header}/>
         <HomeEvents/>
@@ -32,8 +32,19 @@ export async function getStaticProps(context) {
   catch (error) {
     data_header = false 
   } 
-  return {
-    props: { data_header },
-    revalidate: 2, // will be passed to the page component as props
-  }
+   
+  let slider_data  
+  try {
+    const response1 = await fetch(`${process.env.NEXT_PUBLIC_BASE_URL}/${process.env.NEXT_PUBLIC_SCHOOL}/items/slider?status=published&fields=caption,image.data.full_url`)
+
+    slider_data = await response1.json()  
+  } 
+  catch (error) {
+    slider_data = false 
+  }  
+
+return {
+props: { data_header,slider_data },
+revalidate: 2, // will be passed to the page component as props
+}
 }
