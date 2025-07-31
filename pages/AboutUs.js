@@ -41,7 +41,7 @@ const AboutUs = ({ data_header }) => {
       >
         <img
           className="w-full "
-          src="https://rosemarydn.com/images/upper.png"
+          src="/images/upper.png"
         />
         <div className="leading-[ 22.5px] font-normal">
           <h5 className="text-center">
@@ -56,7 +56,7 @@ PHILOSOPHY BE WHAT YOU WANT TO BE Some people follow a path they choose on their
         </div>
         <img
           className="w-full"
-          src="https://rosemarydn.com/images/under.png"
+          src="/images/lower.png"
         />
       </div>
     </Layout>

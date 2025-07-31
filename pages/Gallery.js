@@ -1,4 +1,4 @@
-import { SRLWrapper } from "simple-react-lightbox";
+// import { SRLWrapper } from "simple-react-lightbox";
 import Layout from '../Component/Layout';
 import React, { useState, useEffect } from 'react';
 import { base_url, school_name } from '../SimpleState/auth'
@@ -18,7 +18,7 @@ const Gallery = ({ data_header, gallery_data }) => {
 
   return (
     <Layout header_data={data_header }>
-      <SRLWrapper  >
+      {/* <SRLWrapper  > */}
         <div className="container-fluid ">
           <div className="  md:grid p-5  md:grid-cols-5 sm:grid pt-20 sm:grid-cols-2   bg-[#0066cc]">
             {gallery_data?.data?.length > 0 ?
@@ -26,7 +26,7 @@ const Gallery = ({ data_header, gallery_data }) => {
                 return (
                   <div key={i} className="p-2">
                     <img
-                      src={item.photo.data.full_url}
+                      src={item.photo.data.full_url?.replace('http://', 'https://')}
                       className="w-full h-[200px]  rounded-lg"
                       alt="no_img"
                     />
@@ -47,7 +47,7 @@ const Gallery = ({ data_header, gallery_data }) => {
               })}
           </div>
         </div>
-      </SRLWrapper>
+      {/* </SRLWrapper> */}
 
     </Layout>
   );
