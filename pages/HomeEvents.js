@@ -109,7 +109,7 @@ const HomeEvents = () => {
                             return <div className="carousel-inner" role="listbox" key={index} >
                                 <div className='carousel ' role="listbox" style={{ marginTop: "15px" }}>
                                     <img
-                                        src={item?.photo?.data?.full_url}
+                                        src={item?.photo?.data?.full_url?.replace('http://', 'https://')}
                                         style={{ height: "250px", width: "100%", border: "1px solid #ccc" }}
                                         alt="sorry_no_img"
                                     />

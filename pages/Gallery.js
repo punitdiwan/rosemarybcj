@@ -26,7 +26,7 @@ const Gallery = ({ data_header, gallery_data }) => {
                 return (
                   <div key={i} className="p-2">
                     <img
-                      src={item.photo.data.full_url}
+                      src={item.photo.data.full_url?.replace('http://', 'https://')}
                       className="w-full h-[200px]  rounded-lg"
                       alt="no_img"
                     />
