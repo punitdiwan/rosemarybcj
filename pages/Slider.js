@@ -18,7 +18,7 @@ const Slider = ({ slider_data }) => {
 
   return (
     <div>
-      <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}  >
+      <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true} className="mt-14" >
         {slider_data?.data?.length > 0 ?
             slider_data?.data?.map((item, index) => {
               return <div className="carousel-inner" role="listbox" key={index} >
