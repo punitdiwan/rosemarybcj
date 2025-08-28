@@ -102,7 +102,7 @@ const HomeEvents = () => {
 
             </div>
             <div className="mx-3">
-                <h1 className="py-2 text-center text-[white] "><b> Topper (2019-2020)</b></h1>
+                <h1 className="py-2 text-center text-[white] "><b> Topper (2024-2025)</b></h1>
 
                 <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}   >
                     {

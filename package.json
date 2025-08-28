@@ -21,7 +21,8 @@
     "react-scripts": "^5.0.1",
     "react-slideshow-image": "^4.3.2",
     "simpler-state": "^1.0.3",
-    "styled-components": "^5.3.1"
+    "styled-components": "^5.3.1",
+    "yet-another-react-lightbox": "^3.25.0"
   },
   "devDependencies": {
     "autoprefixer": "^10.3.4",
