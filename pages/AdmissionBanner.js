@@ -115,11 +115,12 @@ const AdmissionBanner = () => {
                         >
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
-                                width="26"
-                                height="26"
-                                fill="currentColor"
+                                width="30"
+                                height="30"
+                                fill="white"
                                 className="bi bi-x"
                                 viewBox="0 0 16 16"
+                                style={{ marginTop: "10px" }}
                             >
                                 <path
                                     fillRule="evenodd"
