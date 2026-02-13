@@ -3,7 +3,7 @@ import Layout from "../Component/Layout";
 import SchoolMassage from '../pages/SchoolMassage'
 import Slider from '../pages/Slider'
 import HomeEvents from '../pages/HomeEvents'
- 
+import AdmissionBanner from '../pages/AdmissionBanner'
 
 export default function Home({ data_header ,slider_data}) { 
 
@@ -11,6 +11,7 @@ export default function Home({ data_header ,slider_data}) {
   return (
     <div>
       <Layout header_data={data_header}>
+        <AdmissionBanner/>
         <Slider  slider_data={slider_data}/> 
         
         <SchoolMassage  header_data={data_header}/>
