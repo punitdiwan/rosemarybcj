@@ -13,7 +13,6 @@ export default function Home({ data_header ,slider_data}) {
       <Layout header_data={data_header}>
         <AdmissionBanner/>
         <Slider  slider_data={slider_data}/> 
-        
         <SchoolMassage  header_data={data_header}/>
         <HomeEvents/>
       </Layout>
