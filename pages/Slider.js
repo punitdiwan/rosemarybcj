@@ -52,7 +52,12 @@ const Slider = ({ slider_data }) => {
               <div key={index}>
                 <img
                   src={item?.image?.data?.full_url?.replace("http://", "https://")}
-                  className="w-full md:h-[400px] lg:h-[500px] h-[230px] object-cover"
+                  className="relative w-full h-[300px] md:h-[500px] lg:h-[640px]
+
+
+
+
+"
                   alt="slider_img"
                 />
               </div>
@@ -62,7 +67,12 @@ const Slider = ({ slider_data }) => {
                 <img
                   src={slide.title}
                   alt="slider_img"
-                  className="w-full md:h-[400px] lg:h-[500px] h-[230px] object-cover"
+                  className="relative w-full h-[300px] md:h-[500px] lg:h-[640px]
+
+
+
+
+"
                 />
               </div>
             ))}
