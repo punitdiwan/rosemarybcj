@@ -7,9 +7,6 @@ module.exports = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     domains: ['rosemarydn.com'],
   },
-  experimental: {
-    optimizeCss: true,
-  },
   async headers() {
     return [
       {
