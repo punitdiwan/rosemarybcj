@@ -1,13 +1,12 @@
-import dynamic from 'next/dynamic';
+
 import React, { useState, useEffect } from 'react';
 import 'react-calendar/dist/Calendar.css';
-// import Calendar from 'react-calendar';
+import Calendar from 'react-calendar';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { Carousel } from 'react-responsive-carousel';
 import axios from 'axios';
 import { base_url, school_name } from '../SimpleState/auth'
 
-const Calendar = dynamic(() => import('react-calendar'), { ssr: false });
 const HomeEvents = () => {
     const [value, onChange] = useState(new Date()); //this is for Calendar
     const [data, setdata] = useState("")
@@ -16,8 +15,8 @@ const HomeEvents = () => {
     const get_school_name = school_name.use()
 
     const slides = [
-        { title: "/images/is3.jpg ", description: 'Name-1' },
-        { title: " /images/is5.jpg", description: 'Name-2' },
+        // { title: "/images/is3.jpg ", description: 'Name-1' },
+        // { title: " /images/is5.jpg", description: 'Name-2' },
     ];
 
 
@@ -51,7 +50,6 @@ const HomeEvents = () => {
                     setdata1(response)
 
                 }
-
             })
             .catch((error) => {
                 console.log(error);
@@ -82,9 +80,7 @@ const HomeEvents = () => {
                                     </div>
                                 ))
                             }
-
                         </div>
-
                     </marquee>
                 </div>
 
@@ -96,48 +92,72 @@ const HomeEvents = () => {
                         className="bg-[#0f6580] react-calendar "
                         onChange={onChange}
                         value={value}
-                         
+
                     />
                 </div>
 
             </div>
             <div className="mx-3">
-                <h1 className="py-2 text-center text-[white] "><b> Topper (2024-2025)</b></h1>
+                <h1 className="py-2 text-center text-[white] "><b> Topper (2025-2026)</b></h1>
 
-                <Carousel showThumbs={false} autoPlay={true} infiniteLoop={true}   >
-                    {
-                        data?.data?.data.map((item, index) => {
-                            return <div className="carousel-inner" role="listbox" key={index} >
-                                <div className='carousel ' role="listbox" style={{ marginTop: "15px" }}>
-                                    <img
-                                        src={item?.photo?.data?.full_url?.replace('http://', 'https://')}
-                                        style={{ height: "250px", width: "100%", border: "1px solid #ccc" }}
-                                        alt="sorry_no_img"
-                                    />
-                                     <h4 className="p-0 py-3 m-0 text-[white]"
-                                        style={{ border: "1px solid #ccc" }}>{item.name}
-                                        <br />
-                                        <span>{item.percent}%</span>
-                                    </h4>
-                                </div>
+                <div style={{ position: "relative" }}>
+                    <Carousel
+                        showThumbs={false}
+                        autoPlay={true}
+                        infiniteLoop={true}
+                        showArrows={false}
+                        showStatus={false}
+                    >
+                        {data?.data?.data.map((item, index) => (
+                            <div key={index}>
+                                <img
+                                    src={item?.photo?.data?.full_url?.replace('http://', 'https://')}
+                                    style={{ height: "300px", width: "100%" }}
+                                    alt=""
+                                />
+                                <h4 className="text-white">{item.name}</h4>
                             </div>
-                        })
-                        ||
-                        slides.map((slide, index) => {
-                            return <div className="carousel-inner" role="listbox" key={index} >
-                                <div className='carousel ' role="listbox" style={{ marginTop: "15px" }}>
-                                    <img
-                                        src={slide.title}
-                                        style={{ height: "250px", width: "100%" }}
-                                        alt="sorry_no_img"
-                                    />
-                                    <h4 className="p-0 py-3 m-0" style={{ border: "1px solid #ccc" }}>{slide.description}</h4>
-                                </div>
-                            </div>
-                        })
-                    }
+                        ))}
+                    </Carousel>
 
-                </Carousel>
+                    {/* LEFT ARROW */}
+                    <button
+                        onClick={() => document.querySelector('.carousel .control-prev')?.click()}
+                        style={{
+                            position: "absolute",
+                            top: "50%",
+                            left: "5px",
+                            transform: "translateY(-50%)",
+                            // zIndex: 999,
+                            background: "black",
+                            color: "white",
+                            border: "none",
+                            padding: "10px",
+                            cursor: "pointer"
+                        }}
+                    >
+                        ‹
+                    </button>
+
+                    {/* RIGHT ARROW */}
+                    <button
+                        onClick={() => document.querySelector('.carousel .control-next')?.click()}
+                        style={{
+                            position: "absolute",
+                            top: "50%",
+                            right: "5px",
+                            transform: "translateY(-50%)",
+                            // zIndex: 999,
+                            background: "black",
+                            color: "white",
+                            border: "none",
+                            padding: "10px",
+                            cursor: "pointer"
+                        }}
+                    >
+                        ›
+                    </button>
+                </div>
 
 
             </div>
@@ -146,3 +166,5 @@ const HomeEvents = () => {
 }
 
 export default HomeEvents
+
+
