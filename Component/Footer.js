@@ -1,23 +1,23 @@
 import React, { Component } from "react";
-const Footer = ({header_data}) => {
+const Footer = ({ header_data }) => {
 
   // console.log(header_data)
-  
+
   return (
     <>
       <div className="bg-gradient-to-r text-[#e0d917] from-footers-default  to-footerend-default px-6  py-16   md:px-20 flex md:flex-row flex-col justify-evenly ">
         <div className="">
           <div className="flex flex-row ">
             <img
-            src={header_data?.data? header_data?.data[0]?.logo?.data?.full_url?.replace('http://', 'https://') : "https://rosemarydn.com/images/logo.png"}
+              src={header_data?.data ? header_data?.data[0]?.logo?.data?.full_url.replace("http://", "https://") : "https://rosemarydn.com/images/logo.png"}
               // src="https://rosemarydn.com/images/logo.png"
               className=" h-[5rem] w-[5rem]"
             />
             <h4
-              className="  ml-3 flex items-center text-basetext-[#e0d917]
+              className="flex  ml-3 items-center text-basetext-[#e0d917]
                 "
             >
-               {header_data?.data? header_data?.data[0]?.title : "Maitretech Academy Public School"}
+              {header_data?.data ? header_data?.data[0]?.title : "Maitretech Academy Public School"}
               {/* Rose Mary Hr. Sec. School */}
             </h4>
           </div>
@@ -40,9 +40,9 @@ const Footer = ({header_data}) => {
                 d="M502.3 190.8c3.9-3.1 9.7-.2 9.7 4.7V400c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V195.6c0-5 5.7-7.8 9.7-4.7 22.4 17.4 52.1 39.5 154.1 113.6 21.1 15.4 56.7 47.8 92.2 47.6 35.7.3 72-32.8 92.3-47.6 102-74.1 131.6-96.3 154-113.7zM256 320c23.2.4 56.6-29.2 73.4-41.4 132.7-96.3 142.8-104.7 173.4-128.7 5.8-4.5 9.2-11.5 9.2-18.9v-19c0-26.5-21.5-48-48-48H48C21.5 64 0 85.5 0 112v19c0 7.4 3.4 14.3 9.2 18.9 30.6 23.9 40.7 32.4 173.4 128.7 16.8 12.2 50.2 41.8 73.4 41.4z"
               ></path>
             </svg>{" "}
-            <span className="ml-2 "> 
-            {header_data?.data? header_data?.data[0]?.email : "maitretech@example.com"}
-            {/* rosemarydwarka@gmail.com */}
+            <span className="ml-2 ">
+              {header_data?.data ? header_data?.data[0]?.email : "maitretech@example.com"}
+              {/* rosemarydwarka@gmail.com */}
             </span>
           </span>
 
@@ -69,9 +69,9 @@ const Footer = ({header_data}) => {
               ></path>
             </svg>
             <span className="ml-2 mt-2">
-            {header_data?.data? header_data?.data[0]?.phone : "111111211"}
+              {header_data?.data ? header_data?.data[0]?.phone : "111111211"}
               {/* 0755-2740018 */}
-              </span>
+            </span>
           </span>
 
           <div className="mt-2 " >
@@ -96,13 +96,13 @@ const Footer = ({header_data}) => {
               ></path>
             </svg>
             <div className="ml-2 ">
-            {header_data?.data? header_data?.data[0]?.address : " Maitretech School Bhopal "}
-              
-            {/* Maitretech School Bhopal */}
+              {header_data?.data ? header_data?.data[0]?.address : " Maitretech School Bhopal "}
+
+              {/* Maitretech School Bhopal */}
             </div>
           </address>
-          <div className= "pb-5 mt-2">
-            <hr className="myLine"/>
+          <div className="pb-5 mt-2">
+            <hr className="myLine" />
           </div>
         </div>
         {/* ==================================== */}
@@ -113,7 +113,6 @@ const Footer = ({header_data}) => {
             <li className="">
               <div
                 className=" text-[#e0d917]  flex flex-row items-center  hover:no-underline "
-                href="#"
               >
                 <svg
                   width="3%"
@@ -141,7 +140,6 @@ const Footer = ({header_data}) => {
             <li>
               <div
                 className="flex flex-row items-center hover:no-underline"
-                
               >
                 <svg
                   width="3%"
@@ -160,15 +158,14 @@ const Footer = ({header_data}) => {
                   ></path>
                 </svg>
                 <a className="pl-1 text-lg text-white hover:no-underline" href="Contactus">
-        
+
                   contact us
                 </a>
               </div>
             </li>
             <li>
-              <div  
+              <div
                 className="flex flex-row items-center text-yellow-300 hover:no-underline "
-                
               >
                 <svg
                   width="3%"
@@ -187,7 +184,7 @@ const Footer = ({header_data}) => {
                   ></path>
                 </svg>
                 <a className="pl-1 text-lg text-white hover:no-underline " href="/Gallery">
-            
+
                   Gallery
                 </a>
               </div>
@@ -195,7 +192,6 @@ const Footer = ({header_data}) => {
             <li>
               <div
                 className="flex flex-row items-center text-yellow-300 hover:no-underline"
-                
               >
                 <svg
                   width="3%"
@@ -225,22 +221,28 @@ const Footer = ({header_data}) => {
           </ul>
         </div>
         <div className="mt-3 md:mt-6">
-          <h3 className= " text-[#e0d917] text-lg">Follow Us</h3>
-          <svg
-            className=" mb-2  text-white ml-[30px] w-[1.7rem] svg-inline-fa fa-facebook-square fa-w-14 fa-2x"
-            aria-hidden="true"
-            dataprefix="fab"
-            dataicon="facebook-square"
-            role="img"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 448 512"
-            datafai2svg=""
+          <h3 className="text-[#e0d917] text-lg">Follow Us</h3>
+
+          <a
+            href="https://www.facebook.com/share/1ZRw2qyYfL/"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            <path
-              fill="currentColor"
-              d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"
-            ></path>
-          </svg>
+            <svg
+              className="mb-2 text-white ml-[30px] w-[1.7rem] svg-inline-fa fa-facebook-square fa-w-14 fa-2x cursor-pointer"
+              aria-hidden="true"
+              data-prefix="fab"
+              data-icon="facebook-square"
+              role="img"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 448 512"
+            >
+              <path
+                fill="currentColor"
+                d="M448 80v352c0 26.5-21.5 48-48 48h-85.3V302.8h60.6l8.7-67.6h-69.3V192c0-19.6 5.4-32.9 33.5-32.9H384V98.7c-6.2-.8-27.4-2.7-52.2-2.7-51.6 0-87 31.5-87 89.4v49.9H184v67.6h60.9V480H48c-26.5 0-48-21.5-48-48V80c0-26.5 21.5-48 48-48h352c26.5 0 48 21.5 48 48z"
+              ></path>
+            </svg>
+          </a>
         </div>
       </div>
       <div className="bg-[#132f57] py-3 text-white flex flex-col md:flex-row md:justify-around justify-center text-center ">
@@ -266,7 +268,7 @@ const Footer = ({header_data}) => {
                 d="M414.9 24C361.8 24 312 65.7 288 89.3 264 65.7 214.2 24 161.1 24 70.3 24 16 76.9 16 165.5c0 72.6 66.8 133.3 69.2 135.4l187 180.8c8.8 8.5 22.8 8.5 31.6 0l186.7-180.2c2.7-2.7 69.5-63.5 69.5-136C560 76.9 505.7 24 414.9 24z"
               ></path>
             </svg>
-          by maitretech.com
+            by maitretech.com
           </a>
         </div>
       </div>
