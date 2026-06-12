@@ -17,7 +17,7 @@ const AboutUs = ({ data_header }) => {
 
 
         if (response?.data?.data?.length > 0) {
-          console.log(response.data);
+          // console.log(response.data);
           setdata(response.data.data[0])
           // response?.data?.data[0].map((data1,i)=>{
           //     setdata(data1) 
@@ -37,7 +37,7 @@ const AboutUs = ({ data_header }) => {
   return (
     <Layout header_data={data_header}>
       <div
-        className="mx-3 "
+        className="mx-3 mt-10"
       >
         <img
           className="w-full "
@@ -45,13 +45,14 @@ const AboutUs = ({ data_header }) => {
         />
         <div className="leading-[ 22.5px] font-normal">
           <h5 className="text-center">
-            {data?.heading || "About School"}
+            {/* {data?.heading || "About School"} */}
             {/* About us */}
+            About us
 
           </h5>
           <p className="mb-0">
-          Rose Mary Hr. Sec. School Jahangirabad School is a Higher Secondary School for both girls and boys managed by Rose Mary Group. Rose Mary Group was established in 1991 and run by Mr Devendra Singh Ji. Our institution is recogniged by the Madhya Pradesh Board of education. Rose Mary School, Jahagirabad is committed to fostering excellence in education. We firmly believe that teaching is not about knowledge downloads, but opening the minds of young learners. We guide them towards learning, comprehensively focussing on the overall development of each student.
-PHILOSOPHY BE WHAT YOU WANT TO BE Some people follow a path they choose on their own. They discover their true calling. They chase their dreams with passion, and excel in their chosen discipline. But, best of all, they become what they want to be. Presidium is the school for such people. It is our belief that a teacher's influence is for eternity. Our teachers, therefore, identify the interests and aspirations of students and, working closely with their parents, nourish their individual talents. Our faculty, by focusing on life skills and methodology, brings out the best in our students. We believe that every child is exceptional and has the potential to evolve into a dynamic person and fulfill his/her aspirations. At Rose Mary School, Jahangirabad every learner becomes who he or she is destined to be: A leader of tomorrow.
+            Rose Mary School is a Higher secondary school for both girls and boys managed by rose mary Group. Rose Mary Group was established in 1991 and run by Mr Devendra Singh Ji. Our institution is recogniged by the Madhya Pradesh Board of education.
+            We, Rose Mary High School, understand that each child is a distinct individual who needs to be nurtured in order to grow into a mature and responsible citizen. Our academic infrastructure along with a wide range of co-curricular activities help our students in the all round personality development. We have a strong team of motivated teachers who are always ready to accept challenges of developing the potential of each and every student. Keeping in view the ideas of democracy and our ancient culture, Rose Mary High School strives to provide a system of education most suited to the needs of our society today. Stress on innovative methods of teaching , opportunities for shouldering responsibilities during school life, constant participation in sports and co-curricular activities lend meaning to the school life. Thus, the end product is the harmonious, all round developed personality of our students poised on the threshold of life.
           </p>
         </div>
         <img
@@ -80,6 +81,6 @@ export async function getStaticProps(context) {
   }
   return {
     props: { data_header },
-    revalidate: 86400, // 1 day
+    revalidate: 86400, // 24 hours - reduces serverless invocations on Vercel Pro
   }
 }
