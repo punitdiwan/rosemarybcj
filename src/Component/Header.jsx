@@ -44,7 +44,7 @@ const Header = ({ header_data }) => {
                   {schoolData?.title}
                 </span>
                 <p className="mt-2 mr-2 sm:justify-items-center text-white text-xl sm:text-2xl md:text-3xl" style={{ fontFamily: "'Fugaz One', cursive" }}>
-                  {schoolData?.address}
+                  {schoolData?.area}
                 </p>
               </div>
             </>
