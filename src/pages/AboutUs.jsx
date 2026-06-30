@@ -93,35 +93,23 @@ const AboutUs = () => {
                 </h2>
 
                 {/* Image + Content */}
-                <div className="flex flex-col lg:flex-row gap-10 items-start">
+                {/* Description */}
+                <div className="w-full">
+                  <div
+                    className="text-justify leading-8 text-[16px] text-gray-700"
+                    dangerouslySetInnerHTML={{
+                      __html: item.description || defaultDescription,
+                    }}
+                  />
+                </div>
 
-                  {/* Left Image */}
-                  <div className="w-full lg:w-5/12">
-                    {imageUrl ? (
-                      <img
-                        src={imageUrl}
-                        alt={item.title}
-                        className="w-full h-[420px] object-cover rounded-xl shadow-lg"
-                      />
-                    ) : (
-                      <img
-                        src="/images/about.jpg"
-                        alt="About"
-                        className="w-full h-[420px] object-cover rounded-xl shadow-lg"
-                      />
-                    )}
-                  </div>
-
-                  {/* Right Description */}
-                  <div className="w-full lg:w-7/12">
-                    <div
-                      className="text-justify leading-8 text-[16px] text-gray-700"
-                      dangerouslySetInnerHTML={{
-                        __html: item.description || defaultDescription,
-                      }}
-                    />
-                  </div>
-
+                {/* Image After Description */}
+                <div className="w-full mt-8 flex justify-center">
+                  <img
+                    src={imageUrl || "/images/about.jpg"}
+                    alt={item.title}
+                    className="w-full max-w-4xl h-[420px] object-cover rounded-xl shadow-lg"
+                  />
                 </div>
               </div>
             );
